@@ -24,7 +24,7 @@ class CounterView extends GetView<CounterController> {
               () => Text(controller.bilangan.toString()),
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                   onPressed: () {
@@ -32,12 +32,14 @@ class CounterView extends GetView<CounterController> {
                   },
                   child: Icon(Icons.add),
                 ),
+                SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: () {
                     controller.kurangSatu();
                   },
                   child: Icon(Icons.minimize),
                 ),
+                SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: () {
                     controller.resetData();
